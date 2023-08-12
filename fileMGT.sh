@@ -32,7 +32,7 @@ echo "What is the filename you want to create?"
 read filename
 touch $filename
 echo "THIS IS A TEST" >> $filename
-echo "Which environment do you want to create the file  $filename?"
+echo "In which environment do you want to create the file  $filename?"
 echo "dev , qa or prod"
 read env
 
@@ -40,14 +40,14 @@ read env
 #
 #
 if [[ -e ./$env1 ]] && [[ -e ./$env2 ]] && [[ -e ./$env3 ]];then
-        echo File is being copied to $env
+        echo "File is being copied to $env"
         sleep 3
 
 else
         mkdir dev
         mkdir qa
         mkdir prod
-        echo File is being copied to $env
+        echo "File is being copied to $env"
         sleep 3
 fi
 
